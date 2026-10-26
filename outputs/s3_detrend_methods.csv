@@ -1,0 +1,7 @@
+method,frame_auc,best_frame_f1,best_threshold
+rolling median 2 s,0.687,0.52,0.438
+rolling median 3 s (course),0.669,0.536,0.258
+Savitzky-Golay 3 s,0.593,0.463,0.841
+Butterworth high-pass 0.35 Hz,0.599,0.471,0.872
+first difference (lag 1),0.583,0.392,0.53
+no detrending,0.646,0.454,0.304

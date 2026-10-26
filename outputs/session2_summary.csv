@@ -1,0 +1,9 @@
+,0
+frame_count,1841
+fps,59.935
+duration_s,30.72
+reference_brightness,112.38
+correction_min,0.963
+correction_max,1.031
+eye_box,"(250, 470, 640, 560)"
+tracked_video_mb,29.0

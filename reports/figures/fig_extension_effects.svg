@@ -1,0 +1,100 @@
+<svg viewBox="0 0 680 404" width="100%" role="img" xmlns="http://www.w3.org/2000/svg" font-family="Microsoft YaHei, PingFang SC, Helvetica, Arial, sans-serif">
+<title>延伸实验的效应量</title>
+<desc>左面板为模型评估侧各改动后的准确率，右面板为信号侧各改动后的 AUC，两者均以课程设置为参考虚线；下方面板对比帧级与事件级 F1。</desc>
+
+<text x="40" y="44" dominant-baseline="central" font-size="11.5" font-weight="500" fill="#2C2C2A">(a) 模型评估侧 · 准确率</text>
+<text x="350" y="44" dominant-baseline="central" font-size="11.5" font-weight="500" fill="#2C2C2A">(b) 信号侧 · AUC</text>
+
+<line x1="272" y1="78" x2="272" y2="220" stroke="#888780" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="272" y="70" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#5F5E5A">课程 0.806</text>
+<line x1="598" y1="78" x2="598" y2="250" stroke="#888780" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="598" y="70" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#5F5E5A">课程 0.669</text>
+
+<text x="40" y="90" dominant-baseline="central" font-size="11" fill="#444441">按马分组 5 折</text>
+<line x1="191" y1="90" x2="272" y2="90" stroke="#85B7EB" stroke-width="1.2"/>
+<circle cx="191" cy="90" r="4.5" fill="#185FA5"/>
+<text x="191" y="78" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#0C447C">0.758</text>
+
+<text x="40" y="120" dominant-baseline="central" font-size="11" fill="#444441">加入 5 个衍生特征</text>
+<line x1="199" y1="120" x2="272" y2="120" stroke="#85B7EB" stroke-width="1.2"/>
+<circle cx="199" cy="120" r="4.5" fill="#185FA5"/>
+<text x="199" y="108" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#0C447C">0.763</text>
+
+<text x="40" y="150" dominant-baseline="central" font-size="11" fill="#444441">类别权重平衡</text>
+<line x1="245" y1="150" x2="272" y2="150" stroke="#85B7EB" stroke-width="1.2"/>
+<circle cx="245" cy="150" r="4.5" fill="#185FA5"/>
+<text x="245" y="138" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#0C447C">0.790</text>
+
+<text x="40" y="180" dominant-baseline="central" font-size="11" fill="#444441">嵌套 CV（无偏）</text>
+<line x1="255" y1="180" x2="272" y2="180" stroke="#85B7EB" stroke-width="1.2"/>
+<circle cx="255" cy="180" r="4.5" fill="#185FA5"/>
+<text x="255" y="168" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#0C447C">0.796</text>
+
+<text x="40" y="210" dominant-baseline="central" font-size="11" fill="#444441">网格搜索最优</text>
+<line x1="272" y1="210" x2="291" y2="210" stroke="#EF9F27" stroke-width="1.2"/>
+<circle cx="291" cy="210" r="4.5" fill="#BA7517"/>
+<text x="291" y="198" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#854F0B">0.817</text>
+
+<line x1="160" y1="232" x2="330" y2="232" stroke="#B4B2A9" stroke-width="1"/>
+<line x1="177" y1="232" x2="177" y2="236" stroke="#B4B2A9" stroke-width="1"/>
+<text x="177" y="246" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#888780">0.75</text>
+<line x1="228" y1="232" x2="228" y2="236" stroke="#B4B2A9" stroke-width="1"/>
+<text x="228" y="246" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#888780">0.78</text>
+<line x1="279" y1="232" x2="279" y2="236" stroke="#B4B2A9" stroke-width="1"/>
+<text x="279" y="246" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#888780">0.81</text>
+
+<text x="350" y="90" dominant-baseline="central" font-size="11" fill="#444441">整帧（不裁剪）</text>
+<line x1="485" y1="90" x2="598" y2="90" stroke="#5DCAA5" stroke-width="1.2"/>
+<circle cx="485" cy="90" r="4.5" fill="#0F6E56"/>
+<text x="485" y="78" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#0F6E56">0.524</text>
+
+<text x="350" y="120" dominant-baseline="central" font-size="11" fill="#444441">跟踪逐帧更新</text>
+<line x1="530" y1="120" x2="598" y2="120" stroke="#5DCAA5" stroke-width="1.2"/>
+<circle cx="530" cy="120" r="4.5" fill="#0F6E56"/>
+<text x="530" y="108" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#0F6E56">0.582</text>
+
+<text x="350" y="150" dominant-baseline="central" font-size="11" fill="#444441">S-G 去趋势</text>
+<line x1="539" y1="150" x2="598" y2="150" stroke="#5DCAA5" stroke-width="1.2"/>
+<circle cx="539" cy="150" r="4.5" fill="#0F6E56"/>
+<text x="539" y="138" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#0F6E56">0.593</text>
+
+<text x="350" y="180" dominant-baseline="central" font-size="11" fill="#444441">梯度能量替代亮度</text>
+<line x1="580" y1="180" x2="598" y2="180" stroke="#5DCAA5" stroke-width="1.2"/>
+<circle cx="580" cy="180" r="4.5" fill="#0F6E56"/>
+<text x="580" y="168" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#0F6E56">0.646</text>
+
+<text x="350" y="210" dominant-baseline="central" font-size="11" fill="#444441">基线取 2 s</text>
+<line x1="598" y1="210" x2="612" y2="210" stroke="#5DCAA5" stroke-width="1.2"/>
+<circle cx="612" cy="210" r="4.5" fill="#0F6E56"/>
+<text x="612" y="198" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#0F6E56">0.687</text>
+
+<text x="350" y="240" dominant-baseline="central" font-size="11" fill="#444441">窗口取 1.5 s</text>
+<line x1="598" y1="240" x2="619" y2="240" stroke="#5DCAA5" stroke-width="1.2"/>
+<circle cx="619" cy="240" r="4.5" fill="#0F6E56"/>
+<text x="619" y="228" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#0F6E56">0.696</text>
+
+<line x1="466" y1="262" x2="630" y2="262" stroke="#B4B2A9" stroke-width="1"/>
+<line x1="505" y1="262" x2="505" y2="266" stroke="#B4B2A9" stroke-width="1"/>
+<text x="505" y="276" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#888780">0.55</text>
+<line x1="544" y1="262" x2="544" y2="266" stroke="#B4B2A9" stroke-width="1"/>
+<text x="544" y="276" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#888780">0.60</text>
+<line x1="583" y1="262" x2="583" y2="266" stroke="#B4B2A9" stroke-width="1"/>
+<text x="583" y="276" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#888780">0.65</text>
+<line x1="622" y1="262" x2="622" y2="266" stroke="#B4B2A9" stroke-width="1"/>
+<text x="622" y="276" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#888780">0.70</text>
+
+<text x="40" y="304" dominant-baseline="central" font-size="11.5" font-weight="500" fill="#2C2C2A">(c) 同一段信号，两种评价层级 · F1</text>
+
+<text x="192" y="323" text-anchor="end" dominant-baseline="central" font-size="11" fill="#444441">帧级</text>
+<rect x="200" y="316" width="83" height="14" rx="3" fill="#B5D4F4"/>
+<text x="275" y="323" text-anchor="end" dominant-baseline="central" font-size="11" fill="#0C447C">0.536</text>
+
+<text x="192" y="347" text-anchor="end" dominant-baseline="central" font-size="11" fill="#444441">事件级</text>
+<rect x="200" y="340" width="120" height="14" rx="3" fill="#185FA5"/>
+<text x="312" y="347" text-anchor="end" dominant-baseline="central" font-size="11" fill="#FFFFFF">0.769</text>
+
+<text x="340" y="323" dominant-baseline="central" font-size="11.5" font-weight="500" fill="#185FA5">事件级比帧级高 23 pp</text>
+<text x="340" y="347" dominant-baseline="central" font-size="11" fill="#5F5E5A">按帧报 20 个事件，按事件报 14 个（真值 12）</text>
+
+<text x="40" y="384" dominant-baseline="central" font-size="11" fill="#5F5E5A">图 2　延伸实验的效应量：虚线为课程设置，圆点为该改动后的取值；三面板量纲不同，不作跨面板比较</text>
+</svg>

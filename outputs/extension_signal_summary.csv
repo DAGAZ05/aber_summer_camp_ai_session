@@ -1,0 +1,17 @@
+section,item,frame_auc
+S1 statistic,median brightness,0.671
+S1 statistic,mean brightness,0.669
+S1 statistic,edge/gradient energy,0.646
+S1 statistic,dark 10th pct,0.626
+S1 statistic,upper-half mean (lid),0.601
+S1 statistic,bright 90th pct,0.596
+S1 statistic,lower-half mean,0.557
+S1 statistic,contrast (std),0.474
+S3 detrend method,rolling median 2 s,0.687
+S3 detrend method,rolling median 3 s (course),0.669
+S3 detrend method,Savitzky-Golay 3 s,0.593
+S3 detrend method,Butterworth high-pass 0.35 Hz,0.599
+S3 detrend method,first difference (lag 1),0.583
+S3 detrend method,no detrending,0.646
+S7 global vs roi,whole-frame brightness,0.524
+S7 global vs roi,tracked eye region,0.669

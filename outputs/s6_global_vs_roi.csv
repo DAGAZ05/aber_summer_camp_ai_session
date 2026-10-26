@@ -1,0 +1,3 @@
+signal,frame_auc,best_frame_f1
+whole-frame brightness,0.524,0.371
+tracked eye region,0.669,0.536

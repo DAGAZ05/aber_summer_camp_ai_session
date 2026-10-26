@@ -1,0 +1,130 @@
+<svg viewBox="0 0 680 580" width="100%" role="img" xmlns="http://www.w3.org/2000/svg" font-family="Microsoft YaHei, PingFang SC, Helvetica, Arial, sans-serif">
+<title>课程三阶段方法栈</title>
+<desc>课程由模型评估、视频管线、信号检测三阶段构成，图中标注各阶段所用方法与原文报告数值，并标出课程在检测层缺少量化指标的止点。</desc>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+</defs>
+
+<rect x="40" y="44" width="600" height="52" rx="8" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="0.5"/>
+<text x="340" y="66" text-anchor="middle" dominant-baseline="central" font-size="12.5" font-weight="500" fill="#444441">blink_events.csv　177 事件 · 4 匹马　|　M-006.mp4　1841 帧 · 59.93 fps</text>
+<text x="340" y="85" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#5F5E5A">M-006_groundtruth.npy　逐帧 0/1 标注，与视频帧严格对齐</text>
+
+<text x="74" y="140" text-anchor="middle" dominant-baseline="central" font-size="12.5" font-weight="500" fill="#2C2C2A">阶段一</text>
+<text x="74" y="158" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#5F5E5A">模型评估</text>
+
+<g>
+<rect x="116" y="116" width="112" height="64" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="172" y="138" text-anchor="middle" dominant-baseline="central" font-size="11.5" font-weight="500" fill="#0C447C">时长特征</text>
+<text x="172" y="156" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">闭合 / 停顿 / 张开</text>
+<text x="172" y="172" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">177 个事件</text>
+</g>
+<g>
+<rect x="253" y="116" width="112" height="64" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="309" y="138" text-anchor="middle" dominant-baseline="central" font-size="11.5" font-weight="500" fill="#0C447C">分层 5 折 CV</text>
+<text x="309" y="156" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">StratifiedKFold</text>
+<text x="309" y="172" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">seed = 1 · 全样本折叠</text>
+</g>
+<g>
+<rect x="390" y="116" width="112" height="64" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="446" y="138" text-anchor="middle" dominant-baseline="central" font-size="11.5" font-weight="500" fill="#0C447C">三种分类器</text>
+<text x="446" y="156" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">Dummy · 树 d=4</text>
+<text x="446" y="172" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">森林 75/6</text>
+</g>
+<g>
+<rect x="527" y="116" width="112" height="64" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="583" y="138" text-anchor="middle" dominant-baseline="central" font-size="11.5" font-weight="500" fill="#0C447C">准确率</text>
+<text x="583" y="156" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">0.56 / 0.76 / 0.81</text>
+<text x="583" y="172" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">召回 86% / 74%</text>
+</g>
+<line x1="231" y1="148" x2="249" y2="148" stroke="#888780" stroke-width="1.2" marker-end="url(#arrow)"/>
+<line x1="368" y1="148" x2="386" y2="148" stroke="#888780" stroke-width="1.2" marker-end="url(#arrow)"/>
+<line x1="505" y1="148" x2="523" y2="148" stroke="#888780" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+<text x="74" y="232" text-anchor="middle" dominant-baseline="central" font-size="12.5" font-weight="500" fill="#2C2C2A">阶段二</text>
+<text x="74" y="250" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#5F5E5A">视频管线</text>
+
+<g>
+<rect x="116" y="208" width="112" height="64" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="172" y="230" text-anchor="middle" dominant-baseline="central" font-size="11.5" font-weight="500" fill="#0C447C">读帧与元数据</text>
+<text x="172" y="248" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">VideoCapture</text>
+<text x="172" y="264" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">BGR → 灰度</text>
+</g>
+<g>
+<rect x="253" y="208" width="112" height="64" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="309" y="230" text-anchor="middle" dominant-baseline="central" font-size="11.5" font-weight="500" fill="#0C447C">逐帧全局亮度</text>
+<text x="309" y="248" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">全图像素均值</text>
+<text x="309" y="264" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">亮度时序曲线</text>
+</g>
+<g>
+<rect x="390" y="208" width="112" height="64" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="446" y="230" text-anchor="middle" dominant-baseline="central" font-size="11.5" font-weight="500" fill="#0C447C">滚动中值 2 s</text>
+<text x="446" y="248" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">窗口居中取奇</text>
+<text x="446" y="264" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">减除 + 增益归一化</text>
+</g>
+<g>
+<rect x="527" y="208" width="112" height="64" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="583" y="230" text-anchor="middle" dominant-baseline="central" font-size="11.5" font-weight="500" fill="#0C447C">CSRT 跟踪</text>
+<text x="583" y="248" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">selectROI 手框</text>
+<text x="583" y="264" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">每 100 帧更新</text>
+</g>
+<line x1="231" y1="240" x2="249" y2="240" stroke="#888780" stroke-width="1.2" marker-end="url(#arrow)"/>
+<line x1="368" y1="240" x2="386" y2="240" stroke="#888780" stroke-width="1.2" marker-end="url(#arrow)"/>
+<line x1="505" y1="240" x2="523" y2="240" stroke="#888780" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+<text x="74" y="340" text-anchor="middle" dominant-baseline="central" font-size="12.5" font-weight="500" fill="#2C2C2A">阶段三</text>
+<text x="74" y="358" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#5F5E5A">信号检测</text>
+
+<g>
+<rect x="116" y="316" width="112" height="64" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="172" y="338" text-anchor="middle" dominant-baseline="central" font-size="11.5" font-weight="500" fill="#0C447C">裁剪眼部视频</text>
+<text x="172" y="356" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">逐帧灰度均值</text>
+<text x="172" y="372" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">一条亮度序列</text>
+</g>
+<g>
+<rect x="253" y="316" width="112" height="64" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="309" y="338" text-anchor="middle" dominant-baseline="central" font-size="11.5" font-weight="500" fill="#0C447C">滚动中值 3 s</text>
+<text x="309" y="356" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">估计慢变基线</text>
+<text x="309" y="372" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">相减后中心化到 0</text>
+</g>
+<g>
+<rect x="390" y="316" width="112" height="64" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="446" y="338" text-anchor="middle" dominant-baseline="central" font-size="11.5" font-weight="500" fill="#0C447C">与真值对齐</text>
+<text x="446" y="356" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">截断至较短者</text>
+<text x="446" y="372" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">双 y 轴叠画</text>
+</g>
+<g>
+<rect x="527" y="316" width="112" height="64" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="583" y="338" text-anchor="middle" dominant-baseline="central" font-size="11.5" font-weight="500" fill="#0C447C">人工定阈值</text>
+<text x="583" y="356" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">改 axhline 的 y</text>
+<text x="583" y="372" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#185FA5">肉眼判读</text>
+</g>
+<line x1="231" y1="348" x2="249" y2="348" stroke="#888780" stroke-width="1.2" marker-end="url(#arrow)"/>
+<line x1="368" y1="348" x2="386" y2="348" stroke="#888780" stroke-width="1.2" marker-end="url(#arrow)"/>
+<line x1="505" y1="348" x2="523" y2="348" stroke="#888780" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+<path d="M583 272 V294 H172 V312" fill="none" stroke="#185FA5" stroke-width="1" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+
+<text x="40" y="404" dominant-baseline="central" font-size="11.5" font-weight="500" fill="#444441">教学技法　模型之外，课程真正在训练的判断力</text>
+<g>
+<rect x="40" y="414" width="192" height="26" rx="6" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="0.5"/>
+<text x="136" y="427" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#444441">懒惰基线：多数类 0.56</text>
+<rect x="244" y="414" width="192" height="26" rx="6" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="0.5"/>
+<text x="340" y="427" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#444441">深度 1–10 全扫看过拟合</text>
+<rect x="448" y="414" width="192" height="26" rx="6" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="0.5"/>
+<text x="544" y="427" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#444441">窄阈值 0.016672–0.016685</text>
+<rect x="40" y="448" width="192" height="26" rx="6" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="0.5"/>
+<text x="136" y="461" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#444441">10 次重复 CV 投票定误判</text>
+<rect x="244" y="448" width="192" height="26" rx="6" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="0.5"/>
+<text x="340" y="461" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#444441">过度代表检验（视频 / 马匹）</text>
+<rect x="448" y="448" width="192" height="26" rx="6" fill="#F1EFE8" stroke="#D3D1C7" stroke-width="0.5"/>
+<text x="544" y="461" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#444441">3D 特征空间散点</text>
+</g>
+
+<rect x="40" y="494" width="600" height="46" rx="8" fill="#FAECE7" stroke="#D85A30" stroke-width="0.5" stroke-dasharray="5 3"/>
+<text x="340" y="512" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="500" fill="#993C1D">课程止点：检测层没有任何量化指标（无 F1 / precision / 事件级评价）</text>
+<text x="340" y="530" text-anchor="middle" dominant-baseline="central" font-size="11" fill="#993C1D">阈值由肉眼在图上拖动选定，未报告命中数与误报数 —— 这正是延伸的起点</text>
+
+<text x="40" y="560" dominant-baseline="central" font-size="11" fill="#5F5E5A">图 1　课程三阶段方法栈与原文报告数值（虚线箭头＝阶段间数据依赖）</text>
+</svg>

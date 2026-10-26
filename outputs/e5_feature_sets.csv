@@ -1,0 +1,5 @@
+feature_set,n_features,accuracy,accuracy_sd,recall_H,roc_auc
+raw 3 (course),3,0.7993,0.0051,0.7119,0.8661
+raw 3 + total,4,0.7634,0.0152,0.679,0.8505
+raw 3 + ratios,6,0.7706,0.011,0.6914,0.8503
+raw 3 + everything,8,0.7634,0.0044,0.6749,0.8286

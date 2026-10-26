@@ -1,0 +1,9 @@
+statistic,key,frame_auc,correlation
+median brightness,roi_median,0.671,0.349
+mean brightness,roi_mean,0.669,0.374
+edge/gradient energy,roi_grad_energy,0.646,0.319
+dark 10th pct,roi_p10,0.626,0.262
+upper-half mean (lid),roi_upper_mean,0.601,0.279
+bright 90th pct,roi_p90,0.596,0.154
+lower-half mean,roi_lower_mean,0.557,0.034
+contrast (std),roi_std,0.474,0.031

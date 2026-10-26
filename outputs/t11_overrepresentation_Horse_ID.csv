@@ -1,0 +1,5 @@
+Horse_ID,total_blinks,problem_blinks,expected_problem_blinks,observed_minus_expected,problem_rate
+P,72,17,13.94,3.06,0.24
+M,80,15,15.48,-0.48,0.19
+G,8,1,1.55,-0.55,0.12
+Y,26,3,5.03,-2.03,0.12

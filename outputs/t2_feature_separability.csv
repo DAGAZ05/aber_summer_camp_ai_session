@@ -1,0 +1,5 @@
+feature,univariate_auc,overlap_coefficient,median_F,median_H
+paused_duration,0.793,0.626,0.0417,0.0167
+total_duration,0.783,0.485,0.4838,0.3333
+opening_duration,0.738,0.543,0.2919,0.2002
+closing_duration,0.661,0.717,0.1335,0.1167

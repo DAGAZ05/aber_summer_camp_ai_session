@@ -1,0 +1,4 @@
+estimate,accuracy
+naive best inner score (selection-biased),0.8172
+nested CV (honest),0.7956
+optimism gap,0.0216
